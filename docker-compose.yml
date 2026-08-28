@@ -1,0 +1,13 @@
+# Define la lista de servicios/contenedores que Docker administrará en conjunto
+services:
+  # Nombre del servicio para la aplicación
+  app:
+    # Indica a Docker que debe construir la imagen usando los archivos locales
+    build:
+      context: . # Usa la carpeta actual como raíz del contexto
+      dockerfile: Dockerfile # Especifica el archivo Dockerfile a compilar
+    # Mapeo de puertos: [Puerto de tu computadora/servidor]:[Puerto interno del Nginx en Docker]
+    ports:
+      - '8080:8080'
+    # Reinicia el contenedor automáticamente si se cae o si el servidor donde corre se reinicia
+    restart: always

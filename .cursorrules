@@ -1,0 +1,16 @@
+# Reglas del Proyecto React + Vite
+
+## Stack Tecnológico
+- React 19 + TypeScript (Modo estricto)
+- Bundler: Vite 8
+- Estilos: Tailwind CSS v4 + Radix UI + Class Variance Authority (CVA)
+- Estado y Data Fetching: Zustand (estado global) + TanStack Query v5 (servidor)
+- Enrutamiento: React Router v7
+- Formularios y Validación: React Hook Form + Zod
+
+## Principios de Código
+- Priorizar Server/Client separation lógica (Hooks para lógica, Componentes visuales puros).
+- Mantener componentes UI dentro de `src/components/ui/` utilizando `cn()` para merges de CSS.
+- Agrupar la lógica de negocio por módulos en `src/features/[feature_name]/`.
+- Usar importaciones absolutas configuradas mediante `@/`.
+- Evitar el uso de `any` explícito o implícito en TypeScript.

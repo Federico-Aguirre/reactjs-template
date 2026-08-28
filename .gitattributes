@@ -1,0 +1,6 @@
+# Forzar normalización de saltos de línea para todo el proyecto.
+# Convierte los saltos a LF (estándar de Linux/Mac/Git) para evitar que Windows (CRLF) genere cambios falsos en Git.
+* text=auto eol=lf
+
+# Mantener los scripts ejecutables de Windows con el formato CRLF para que la consola de comandos no falle.
+*.{cmd,bat} text eol=crlf
